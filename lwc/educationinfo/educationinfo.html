@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  title="Education Details" icon-name="custom:custom63">
+        <template for:each={education} for:item="education" for:index="index">
+        <div class="slds-p-left_small slds-box" key= {education.id}>
+            <lightning-input type="text" label="Degree" data-field ="degree" data-index ={index} onchange={handleeducationchange}></lightning-input>
+            <lightning-input type="email" label="Institute" data-field="institute" data-index ={index} onchange={handleeducationchange}></lightning-input>
+            <lightning-input type="number" label="Passout Year" data-field="year" data-index ={index} onchange={handleeducationchange}></lightning-input>
+        </div>
+        </template>
+        <lightning-button variant="brand-outline" label="Add Education" title="Add Education" onclick={addeducation} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>
